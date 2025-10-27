@@ -1,5 +1,10 @@
 # formshield-ai
 
+[![npm version](https://badge.fury.io/js/formshield-ai.svg)](https://www.npmjs.com/package/formshield-ai)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue.svg)](https://www.typescriptlang.org/)
+[![Tests](https://img.shields.io/badge/tests-25%2F25-success.svg)](https://github.com/simanam/formshield-ai)
+
 Open-source TypeScript spam filter using **rules-first scoring** and **optional multi-model AI** for form submissions.
 
 ## Features
