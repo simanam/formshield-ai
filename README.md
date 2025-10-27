@@ -1,4 +1,4 @@
-# @formshield/ai
+# formshield-ai
 
 Open-source TypeScript spam filter using **rules-first scoring** and **optional multi-model AI** for form submissions.
 
@@ -15,7 +15,7 @@ Open-source TypeScript spam filter using **rules-first scoring** and **optional 
 ## Installation
 
 ```bash
-npm install @formshield/ai
+npm install formshield-ai
 ```
 
 Optional peer dependencies:
@@ -33,7 +33,7 @@ npm install @anthropic-ai/sdk
 ### Basic Usage (Rules Only)
 
 ```typescript
-import { createFormShield } from '@formshield/ai';
+import { createFormShield } from 'formshield-ai';
 
 const shield = createFormShield();
 
@@ -57,7 +57,7 @@ console.log(decision);
 ### With OpenAI (Fallback Strategy)
 
 ```typescript
-import { createFormShield, openAiProvider } from '@formshield/ai';
+import { createFormShield, openAiProvider } from 'formshield-ai';
 
 const shield = createFormShield({
   aiProviders: [openAiProvider(process.env.OPENAI_API_KEY!)],
@@ -69,7 +69,7 @@ const shield = createFormShield({
 ### Multi-Model Voting
 
 ```typescript
-import { createFormShield, openAiProvider, anthropicProvider } from '@formshield/ai';
+import { createFormShield, openAiProvider, anthropicProvider } from 'formshield-ai';
 
 const shield = createFormShield({
   aiProviders: [
@@ -197,7 +197,7 @@ Split traffic by hash for A/B testing.
 ## Custom Rules
 
 ```typescript
-import type { Rule } from '@formshield/ai';
+import type { Rule } from 'formshield-ai';
 
 const blockCompetitors: Rule = ({ normalized }) => {
   const domain = normalized.email?.split('@')[1];
@@ -222,7 +222,7 @@ import {
   ruleExcessiveCaps,
   ruleCryptoSpam,
   ruleSeoSpam,
-} from '@formshield/ai';
+} from 'formshield-ai';
 ```
 
 ## Field Descriptors
@@ -256,7 +256,7 @@ await shield.evaluate({
 
 ```typescript
 // app/api/contact/route.ts
-import { createFormShield, openAiProvider } from '@formshield/ai';
+import { createFormShield, openAiProvider } from 'formshield-ai';
 
 const shield = createFormShield({
   aiProviders: [openAiProvider(process.env.OPENAI_API_KEY!)],
@@ -295,7 +295,7 @@ export async function POST(req: Request) {
 
 ```typescript
 import express from 'express';
-import { createFormShield, anthropicProvider } from '@formshield/ai';
+import { createFormShield, anthropicProvider } from 'formshield-ai';
 
 const app = express();
 const shield = createFormShield({
@@ -325,7 +325,7 @@ app.post('/api/contact', async (req, res) => {
 ## Local AI with Ollama
 
 ```typescript
-import { createFormShield, ollamaProvider } from '@formshield/ai';
+import { createFormShield, ollamaProvider } from 'formshield-ai';
 
 const shield = createFormShield({
   aiProviders: [
