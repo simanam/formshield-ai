@@ -65,3 +65,14 @@ Thumbs.db
 
 # Yarn Integrity file
 .yarn-integrity
+
+# Internal planning documents (keep private)
+SUBSTACK_*.md
+ARTICLE_*.md
+CHECKLIST.md
+PROJECT_SUMMARY.md
+PUBLISH.md
+RELEASE_NOTES_*.md
+form_shield_ai_repo_scaffold_*.md
+*_DRAFT.md
+*_GUIDE.md
