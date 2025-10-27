@@ -1,0 +1,37 @@
+# Source files (include only compiled dist/)
+src/
+tests/
+examples/
+
+# Configuration files
+tsconfig.json
+vitest.config.ts
+.env
+.env.*
+!.env.example
+
+# Documentation (keep README, LICENSE)
+CONTRIBUTING.md
+TESTING.md
+SECURITY.md
+form_shield_ai_repo_scaffold_v_1.md
+
+# Development files
+.git/
+.github/
+.vscode/
+.idea/
+*.log
+*.tmp
+
+# Test and coverage
+coverage/
+.nyc_output/
+
+# Build artifacts
+*.tsbuildinfo
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
